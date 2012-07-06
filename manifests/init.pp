@@ -100,7 +100,7 @@ class apache {
 
   apache::config {
     "ports":
-      content => "Listen ${apache_listen_address}:${apache_listen_port}\n",
+      content => "NameVirtualHost ${apache_listen_address}:${apache_listen_port}\nListen ${apache_listen_address}:${apache_listen_port}\n",
       order => "000";
   }
 
